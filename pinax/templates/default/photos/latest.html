@@ -9,11 +9,11 @@
 {% load threadedcommentstags %}
 {% load theme_tags %}
 
-{% block head_title %}{% blocktrans %}Latest Photos{% endblocktrans %}{% endblock %}
+{% block head_title %}{% blocktrans %}{{ title }}{% endblocktrans %}{% endblock %}
 
 {% block body %}
     
-    <h1>{% trans "Latest Photos" %}</h1>
+    <h1>{% trans title %}</h1>
     
     {% if photos %}
     {% autopaginate photos %}

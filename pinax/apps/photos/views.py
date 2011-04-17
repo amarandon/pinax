@@ -135,6 +135,36 @@ def photos(request, template_name="photos/latest.html"):
     ctx = group_context(group, bridge)
     ctx.update({
         "photos": photos,
+        "title": "Latest Photos"
+    })
+    
+    return render_to_response(template_name, RequestContext(request, ctx))
+
+
+@login_required
+def most_viewed(request, template_name="photos/latest.html"):
+    """
+    latest photos
+    """
+    
+    group, bridge = group_and_bridge(request)
+    
+    photos = Image.objects.filter(
+        Q(is_public=True) |
+        Q(is_public=False, member=request.user)
+    )
+    
+    if group:
+        photos = group.content_objects(photos, join="pool", gfk_field="content_object")
+    else:
+        photos = photos.filter(pool__object_id=None)
+    
+    photos = photos.order_by("-view_count")
+    
+    ctx = group_context(group, bridge)
+    ctx.update({
+        "photos": photos,
+        "title": "Most Viewed Photos"
     })
     
     return render_to_response(template_name, RequestContext(request, ctx))

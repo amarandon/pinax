@@ -5,6 +5,8 @@ from django.conf.urls.defaults import *
 urlpatterns = patterns("",
     # all photos or latest photos
     url(r"^$", "pinax.apps.photos.views.photos", name="photos"),
+    # most viewed photos
+    url(r"^most_viewed/$", "pinax.apps.photos.views.most_viewed", name="photo_most_viewed"),
     # a photos details
     url(r"^details/(?P<id>\d+)/$", "pinax.apps.photos.views.details", name="photo_details"),
     # upload photos
