@@ -22,9 +22,9 @@
     
     {% if blogs %}
         <table cellpadding="5" cellspacing="0" border="0" class="blog-list" width="100%">
-            <th>Title</th>
-            <th>Published On</th>
-            <th>Status</th>
+          <th>{% trans 'Title' %}</th>
+          <th>{% trans 'Published On' %}</th>
+          <th>{% trans 'Status' %}</th>
             <th></th>
             {% for post in blogs %}
                 <tr class="{% cycle odd,even %}">
@@ -41,12 +41,12 @@
                             {% endif %}
                         {% endwith %}
                     </td>
-                    <td nowrap>{{ post.publish|date }}</td>
+                    <td nowrap>{{ post.publish|date:"DATE_FORMAT" }}</td>
                     <td>
                         {% with post.status as status %}
                             {% switch status %}
-                                {% case 2 %}Published{% endcase %}
-                                {% case 1 %}Draft{% endcase %}
+                            {% case 2 %}{% trans 'Published' %}{% endcase %}
+                            {% case 1 %}{% trans 'Draft' %}{% endcase %}
                             {% endswitch %}
                         {% endwith %}
                     </td>
