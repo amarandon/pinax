@@ -164,7 +164,7 @@ def most_viewed(request, template_name="photos/latest.html"):
     ctx = group_context(group, bridge)
     ctx.update({
         "photos": photos,
-        "title": "Most Viewed Photos"
+        "title": _("Most Viewed Photos")
     })
     
     return render_to_response(template_name, RequestContext(request, ctx))

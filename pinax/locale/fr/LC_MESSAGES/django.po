@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-24 14:52+0700\n"
+"POT-Creation-Date: 2011-04-24 22:15+0700\n"
 "PO-Revision-Date: 2010-02-28 20:43+0100\n"
 "Last-Translator: James Pic <jamespic@gmial.com>\n"
 "Language-Team: French\n"
@@ -445,6 +445,10 @@ msgstr "publication"
 #, python-format
 msgid "Successfully uploaded photo '%s'"
 msgstr ""
+
+#: apps/photos/views.py:167
+msgid "Most Viewed Photos"
+msgstr "Photos les plus vues"
 
 #: apps/photos/views.py:271 apps/photos/views.py:334
 msgid "You can't edit photos that aren't yours"
@@ -2986,7 +2990,8 @@ msgstr "Pas encore de touites."
 #: templates/default/microblogging/listing.html:21
 #, python-format
 msgid "You haven't posted any <a href=\"%(tweets_url)s\">tweets</a> yet."
-msgstr "Vous n'avez encore publié aucun <a href=\"%(tweets_url)s\">touites</a>."
+msgstr ""
+"Vous n'avez encore publié aucun <a href=\"%(tweets_url)s\">touites</a>."
 
 #: templates/default/microblogging/listing.html:23
 msgid "There are currently no tweets to be listed."
