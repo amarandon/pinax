@@ -70,10 +70,12 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse("blog_post", kwargs={
             "username": self.author.username,
-            "year": self.publish.year,
-            "month": "%02d" % self.publish.month,
             "slug": self.slug
         })
+
+    @property
+    def published(self):
+        return self.status == 2
 
 
 # handle notification of new comments

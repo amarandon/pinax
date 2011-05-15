@@ -37,12 +37,10 @@ def blogs(request, username=None, template_name="blog/blogs.html"):
     }, context_instance=RequestContext(request))
 
 
-def post(request, username, year, month, slug,
+def post(request, username, slug,
          template_name="blog/post.html"):
     post = Post.objects.filter(
         slug = slug,
-        publish__year = int(year),
-        publish__month = int(month),
         author__username = username
     )
     if not post:

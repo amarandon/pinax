@@ -30,8 +30,8 @@ class BlogForm(forms.ModelForm):
     
     def clean_slug(self):
         if not self.instance.pk:
-            if Post.objects.filter(author=self.user, created_at__month=datetime.now().month, created_at__year=datetime.now().year, slug=self.cleaned_data["slug"]).exists():
-                raise forms.ValidationError(u"This field must be unique for username, year, and month")
+            if Post.objects.filter(author=self.user, slug=self.cleaned_data["slug"]).exists():
+                raise forms.ValidationError(u"This field must be unique")
             return self.cleaned_data["slug"]
         try:
             post = Post.objects.get(
@@ -41,7 +41,7 @@ class BlogForm(forms.ModelForm):
                 slug = self.cleaned_data["slug"]
             )
             if post != self.instance:
-                raise forms.ValidationError(u"This field must be unique for username, year, and month")
+                raise forms.ValidationError(u"This field must be unique")
         except Post.DoesNotExist:
             pass
         return self.cleaned_data["slug"]
