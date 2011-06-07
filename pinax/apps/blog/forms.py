@@ -10,7 +10,7 @@ from pinax.apps.blog.models import Post
 class BlogForm(forms.ModelForm):
     
     slug = forms.SlugField(
-        max_length = 20,
+        max_length = 40,
         help_text = _("a short version of the title consisting only of letters, numbers, underscores and hyphens."),
     )
     
