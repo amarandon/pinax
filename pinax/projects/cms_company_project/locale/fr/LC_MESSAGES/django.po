@@ -35,7 +35,7 @@ msgstr "Produits"
 
 #: templates/site_base.html:19
 msgid "Logout"
-msgstr "Déconnection"
+msgstr "Déconnexion"
 
 #: templates/site_base.html:20
 msgid "Account"

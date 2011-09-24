@@ -321,7 +321,7 @@ msgstr "Tout les articles wiki correspondant à <i>%(tag)s</i>"
 #~ msgstr "Administration"
 
 #~ msgid "Logout"
-#~ msgstr "Déconnection"
+#~ msgstr "Déconnexion"
 
 #~ msgid "Login"
 #~ msgstr "Authentification"

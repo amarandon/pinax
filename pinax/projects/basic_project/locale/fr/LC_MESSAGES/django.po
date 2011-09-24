@@ -132,7 +132,7 @@ msgstr "Commencez par <a href=\"%(login_url)s\">vous authentifier</a>"
 #~ msgstr "Admin"
 
 #~ msgid "Logout"
-#~ msgstr "Déconnection"
+#~ msgstr "Déconnexion"
 
 #~ msgid "Login"
 #~ msgstr "Authentification"

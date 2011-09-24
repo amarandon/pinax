@@ -1318,7 +1318,7 @@ msgstr "Projets"
 #: templates/default/_account_bar.html:11
 #: templates/default/account/logout.html:5
 msgid "Logout"
-msgstr "Déconnection"
+msgstr "Déconnexion"
 
 #: projects/cms_company_project/templates/site_base.html:20
 #: projects/cms_holidayhouse_project/templates/site_base.html:20

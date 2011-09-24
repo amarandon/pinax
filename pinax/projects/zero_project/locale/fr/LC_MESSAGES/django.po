@@ -86,7 +86,7 @@ msgstr "&copy; 2010 &lt;votre raison sociale ici&gt;"
 #~ msgstr "Admin"
 
 #~ msgid "Logout"
-#~ msgstr "Déconnection"
+#~ msgstr "Déconnexion"
 
 #~ msgid "Login"
 #~ msgstr "Authentification"
