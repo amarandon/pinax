@@ -1,7 +1,6 @@
 {% extends "messages/base.html" %}
 
 {% load i18n %}
-{% load oembed_tags %}
 {% load timezone_filters %}
 {% load account_tags %}
 
@@ -19,7 +18,7 @@
         <dd>{% user_display message.recipient %}</dd>
     </dl>
     
-    <p>{% oembed %}{{ message.body|linebreaksbr }}{% endoembed %}</p>
+    <p>{{ message.body|linebreaksbr }}</p>
     
     {% ifequal message.recipient user %}
         <p><a href="{% url messages_reply message.id %}">{% trans "Reply" %}</a></p>
