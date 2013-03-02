@@ -9,6 +9,7 @@ from django.utils.translation import ugettext
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.contrib import messages
 
 from avatar.templatetags.avatar_tags import avatar
 from friends.forms import InviteFriendForm
@@ -92,6 +93,9 @@ def profile(request, username, template_name="profiles/profile.html", extra_cont
                 invite_form = InviteFriendForm(request.user, request.POST)
                 if invite_form.is_valid():
                     invite_form.save()
+                    messages.success(request, _("Friendship requested with %(username)s") % {
+                        'username': invite_form.cleaned_data['to_user']
+                    })
             else:
                 invite_form = InviteFriendForm(request.user, {
                     "to_user": username,
