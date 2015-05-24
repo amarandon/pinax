@@ -379,7 +379,7 @@ msgstr "Nom"
 #: apps/photos/models.py:31
 #, fuzzy
 msgid "description"
-msgstr "Destinnataire"
+msgstr "description"
 
 #: apps/photos/models.py:32
 msgid "publish_type"
@@ -2802,7 +2802,7 @@ msgstr "Messages envoyés"
 #: templates/default/messages/outbox.html:12
 #: templates/default/messages/view.html:18
 msgid "Recipient"
-msgstr "Destinnataire"
+msgstr "Destinataire"
 
 #: templates/default/messages/trash.html:8
 msgid "Deleted Messages"
