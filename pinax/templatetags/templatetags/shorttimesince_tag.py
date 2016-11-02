@@ -2,7 +2,7 @@ import datetime
 import time
 
 from django.template import Library
-from django.utils.tzinfo import LocalTimezone
+from django.utils.timezone import LocalTimezone
 from django.utils.translation import ungettext, ugettext
 
 
